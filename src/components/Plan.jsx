@@ -3,7 +3,6 @@ import arcade from '../assets/img/arcade.svg'
 import advanced from '../assets/img/advenced.svg'
 import pro from '../assets/img/pro.svg'
 import { useState } from 'react'
-import { Switch } from '@headlessui/react'
 
 
 export default function Plan() {
@@ -18,7 +17,6 @@ export default function Plan() {
           icon: arcade,
           monthlyPrice: 9,
           yearlyPrice: 90,
-          yearlyPromo: '2 months free'
         },
         {
           id: 'advanced',
@@ -26,7 +24,7 @@ export default function Plan() {
           icon: advanced,
           monthlyPrice: 12,
           yearlyPrice: 120,
-          yearlyPromo: '2 months free'
+
         },
         {
           id: 'pro',
@@ -34,10 +32,12 @@ export default function Plan() {
           icon: pro,
           monthlyPrice: 15,
           yearlyPrice: 150,
-          yearlyPromo: '2 months free'
+
         }
       ]
     };
+
+
 
     return (
         <div className="plan">
@@ -50,8 +50,8 @@ export default function Plan() {
             <div className='pricing'>
                 <div className='arcade'>
                     <img src={arcade} alt="" />
-                    <p></p>
-                    <span></span>
+                    <p>{pricingData.plans[0].name}</p>
+                    <span>${enabled ? pricingData.plans[0].yearlyPrice + '/Yr': pricingData.plans[0].monthlyPrice + '/Mo'}</span>
                 </div>
                 <div className='advanced'>
                     <img src={advanced} alt="" />
