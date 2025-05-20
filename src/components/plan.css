@@ -1,0 +1,117 @@
+.plan {
+    height: 100%;
+    width: 65%;
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.infoTitle{
+    height: 25%;
+    width: 100%;
+}
+
+.infoTitle h2{
+    font-size: 25pt;
+    margin: 0;
+    color: hsl(213, 96%, 18%);
+}
+
+.infoTitle span {
+    color: hsl(231, 11%, 63%) ;
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+.pricing{
+    height: 50%;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+}
+
+.arcade, .advanced, .pro {
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    grid-row: 1;
+    height: 100px;
+    padding: 15px;
+}
+
+
+.month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: hsl(217, 100%, 97%);
+    padding: 10px;
+    border-radius: 8px;
+    grid-column: 1/4;
+    height: 40px;
+
+}
+
+.text-active {
+    font-weight: bold;
+    color: hsl(213, 96%, 18%);
+}
+
+.text-inactive {
+    color: hsl(231, 11%, 63%);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-switch-circle {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-switch-circle {
+    transform: translateX(26px);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: hsl(213, 96%, 18%);
+}
+
+.navbtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 110px;
+}
