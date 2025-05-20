@@ -1,7 +1,7 @@
 .panel {
     background-image: url("../assets/img/sidebar.svg");
     height: 100%;
-    width: 25vw;
+    width: 30%;
     background-repeat: no-repeat;
     box-sizing: border-box;
     padding: 40px;

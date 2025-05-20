@@ -1,10 +1,11 @@
 .infos{
     height: 100%;
-    width: 100%;
+    width: 70%;
     padding-top: 25px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 30px;
+    box-sizing: border-box;
 }
 
 .infoTitle{
