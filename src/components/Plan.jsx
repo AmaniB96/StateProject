@@ -8,7 +8,8 @@ import { useState } from 'react'
 export default function Plan() {
 
     const [enabled, setEnabled] = useState(false)
-
+    const [selectedPlan, setSelectedPlan] = useState(null)  // Add this state
+    
     const pricingData = {
       plans: [
         {
@@ -37,7 +38,12 @@ export default function Plan() {
       ]
     };
 
+    const bgcolor = "rgb(214, 217, 230)"
+  
 
+    const handlePlanSelect = (planId) => {
+        setSelectedPlan(planId)
+    }
 
     return (
         <div className="plan">
@@ -48,22 +54,31 @@ export default function Plan() {
             </div>
 
             <div className='pricing'>
-                <div className='arcade'>
+                <div 
+                    className={`arcade ${selectedPlan === 'arcade' ? 'active' : ''}`}
+                    onClick={() => handlePlanSelect('arcade')}
+                >
                     <img src={arcade} alt="" />
                     <p>{pricingData.plans[0].name}</p>
                     <span>${enabled ? pricingData.plans[0].yearlyPrice + '/Yr': pricingData.plans[0].monthlyPrice + '/Mo'}</span>
                 </div>
-                <div className='advanced'>
+                <div 
+                    className={`advanced ${selectedPlan === 'advanced' ? 'active' : ''}`}
+                    onClick={() => handlePlanSelect('advanced')}
+                >
                     <img src={advanced} alt="" />
-                    <p></p>
-                    <span></span>
+                    <p>{pricingData.plans[1].name}</p>
+                    <span>${enabled ? pricingData.plans[1].yearlyPrice + '/Yr': pricingData.plans[1].monthlyPrice + '/Mo'}</span>
                 </div>
-                <div className='pro'>
+                <div 
+                    className={`pro ${selectedPlan === 'pro' ? 'active' : ''}`}
+                    onClick={() => handlePlanSelect('pro')}
+                >
                     <img src={pro} alt="" />
-                    <p></p>
-                    <span></span>
+                    <p>{pricingData.plans[2].name}</p>
+                    <span>${enabled ? pricingData.plans[2].yearlyPrice + '/Yr': pricingData.plans[2].monthlyPrice + '/Mo'}</span>
                 </div>
-
+                
                 <div className='month'>
                 <span className={!enabled ? 'text-active' : 'text-inactive'}>Monthly</span>
                 

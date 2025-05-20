@@ -54,6 +54,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.arcade:hover, .advanced:hover, .pro:hover {
+    border: 1px solid hsl(243, 100%, 62%);
 }
 
 .pricing img {
@@ -135,4 +141,9 @@
     justify-content: space-between;
     box-sizing: border-box;
     margin-top: 110px;
+}
+
+.active {
+    background-color: rgb(214, 217, 230);
+    border-color: hsl(243, 100%, 62%) !important;
 }
