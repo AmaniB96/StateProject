@@ -1,4 +1,5 @@
 import './App.css'
+import Addons from './components/Addons'
 import Infos from './components/Infos'
 import Plan from './components/plan'
 import SidePanel from './components/sidePanel'
@@ -11,6 +12,7 @@ function App() {
       <SidePanel></SidePanel>
       <Infos></Infos>
       <Plan></Plan>
+      <Addons></Addons>
     </div>
     </>
   )
