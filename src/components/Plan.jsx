@@ -8,7 +8,7 @@ import { useState } from 'react'
 export default function Plan() {
 
     const [enabled, setEnabled] = useState(false)
-    const [selectedPlan, setSelectedPlan] = useState(null)  // Add this state
+    const [selectedPlan, setSelectedPlan] = useState(null) 
     
     const pricingData = {
       plans: [
@@ -38,16 +38,13 @@ export default function Plan() {
       ]
     };
 
-    const bgcolor = "rgb(214, 217, 230)"
-  
-
-    const handlePlanSelect = (planId) => {
+   const handlePlanSelect = (planId) => {
         setSelectedPlan(planId)
     }
 
+
     return (
         <div className="plan">
-
             <div className="infoTitle">
                 <h2>Select your plan</h2>
                 <span>You have the option of monthly or yearly billing</span>
@@ -78,7 +75,7 @@ export default function Plan() {
                     <p>{pricingData.plans[2].name}</p>
                     <span>${enabled ? pricingData.plans[2].yearlyPrice + '/Yr': pricingData.plans[2].monthlyPrice + '/Mo'}</span>
                 </div>
-                
+
                 <div className='month'>
                 <span className={!enabled ? 'text-active' : 'text-inactive'}>Monthly</span>
                 

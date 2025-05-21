@@ -6,6 +6,7 @@
     padding-right: 100px;
     padding-bottom: 30px;
     box-sizing: border-box;
+    display: none;
 }
 
 .infoTitle{
