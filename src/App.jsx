@@ -5,6 +5,7 @@ import Infos from './components/Infos'
 import Plan from './components/plan'
 import SidePanel from './components/sidePanel'
 import Summary from './components/Summary'
+import Thanks from './components/thanks'
 
 import arcade from './assets/img/arcade.svg'
 import advanced from './assets/img/advenced.svg'
@@ -16,7 +17,8 @@ function App() {
     Info: 'info',
     Plan: 'plan',
     Addons: 'addons',
-    Summary: "summary"
+    Summary: "summary",
+    ThankYou: "thanks"
   }
 
   const pricingData = {
@@ -96,6 +98,9 @@ const isPlanValid = () => {
         setCurrentPage(Pages.Summary)
         setActiveNumber("chiffre4")
         break;
+      case Pages.Summary:
+        setCurrentPage(Pages.ThankYou)
+        break;
     }
   }
   
@@ -142,13 +147,18 @@ const isPlanValid = () => {
         case Pages.Summary:
           return <Summary 
             prevPage={prevPage} 
-            nextPage={nextPage} 
+            nextPage={nextPage}  // Make sure nextPage is passed
             selectedPlan={selectedPlan} 
             selectedAddon={selectedAddon} 
             enabled={enabled} 
             pricingData={pricingData} 
             addonslist={addonslist} 
+            setActiveNumber={setActiveNumber}
+            setCurrentPage={setCurrentPage}
+            Pages={Pages}
           />
+        case Pages.ThankYou:
+          return <Thanks />
         default:
           return <Infos nextPage={nextPage} />
       }

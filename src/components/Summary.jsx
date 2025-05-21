@@ -1,22 +1,18 @@
 import './summary.css'
 
 export default function Summary({
-    prevPage, 
-    nextPage, 
+    prevPage,  
+    nextPage,
     selectedPlan, 
     selectedAddon, 
     enabled, 
     pricingData, 
-    addonslist
+    addonslist,
+    Pages,
+    setCurrentPage,
+    setActiveNumber
 }) {
-    // Add these console logs at the start
-    console.log('Summary Props:', {
-        selectedPlan,
-        selectedAddon,
-        enabled,
-        pricingData,
-        addonslist
-    })
+    
     
     // Find the selected plan details
     const planDetails = pricingData.plans.find(plan => plan.id === selectedPlan)
@@ -32,6 +28,12 @@ export default function Summary({
 
     const total = planPrice + addonsTotal
 
+    const handlePlanChange = (e) => {
+        e.preventDefault();
+        setCurrentPage(Pages.Plan);
+        setActiveNumber("chiffre2");
+        };
+
     return (
         <div className='summary'>
             <div className="infoTitle">
@@ -44,7 +46,7 @@ export default function Summary({
                     <p>{planDetails?.name} ({enabled ? 'Yearly' : 'Monthly'})</p>
                     <p>${planPrice}/{enabled ? 'yr' : 'mo'}</p>
                 </div>
-                <a href="#" onClick={() => prevPage()}>Change</a>
+                <a href="" onClick={handlePlanChange}>Change</a>
                 <hr />
                 {selectedAddon.map(addonId => {
                     const addon = addonslist.addonsServices.find(a => a.id === addonId)
@@ -63,7 +65,7 @@ export default function Summary({
                 <p className="total-amount">${total}/{enabled ? 'yr' : 'mo'}</p>
             </div>
 
-            <div className='navbtnaddons'>
+            <div className='navbtnsummary'>
                 <button onClick={prevPage} className='prev'>Go Back</button>
                 <button onClick={nextPage} className='next'>Confirm</button>
             </div>

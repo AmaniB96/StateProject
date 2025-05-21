@@ -1,0 +1,23 @@
+.thankscontainer {
+    height: 100%;
+    width: 65%;
+    padding-top: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thankscontainer h2 {
+    color: hsl(213, 96%, 18%);
+}
+
+.thankscontainer p {
+    color: hsl(231, 11%, 63%);
+    text-align: center;
+}
+

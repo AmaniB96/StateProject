@@ -40,12 +40,22 @@
     margin: 10px 0;
 }
 
+.addon p {
+    margin: 0;
+    font-size: 10pt;
+}
+
 .total {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     color: hsl(231, 11%, 63%) ;
+}
+
+.total p:first-of-type{
+    margin: 0;
+    font-size: 10pt;
 }
 
 .total-amount {
@@ -69,4 +79,12 @@ a {
 
 a:hover {
     color: hsl(243, 100%, 62%);
+}
+
+.navbtnsummary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 30px;
 }
