@@ -4,7 +4,7 @@ import advanced from '../assets/img/advenced.svg'
 import pro from '../assets/img/pro.svg'
 
 
-export default function Plan({ enabled, setEnabled, selectedPlan, setSelectedPlan }) {
+export default function Plan({ enabled, setEnabled, selectedPlan, setSelectedPlan, nextPage, prevPage }) {
 
     const pricingData = {
       plans: [
@@ -94,8 +94,8 @@ export default function Plan({ enabled, setEnabled, selectedPlan, setSelectedPla
             </div>
 
              <div className='navbtn'>
-                <button className='prev'>Go Back</button>
-                <button className='next'> Next Step</button>
+                <button onClick={prevPage} className='prev'>Go Back</button>
+                <button onClick={nextPage} className='next'> Next Step</button>
             </div>
 
         </div>

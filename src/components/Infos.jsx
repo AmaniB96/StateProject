@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './infos.css'
 
-export default function Infos() {
+export default function Infos({nextPage}) {
 
     const [name,SetName] = useState("")
     const [email, SetEmail] = useState("")
@@ -25,9 +25,9 @@ export default function Infos() {
                 <label htmlFor="phone">Your phone number is : {phone}</label> <br />
                 <input type="text" name="" id="name" placeholder='+32 000 000 000' onChange={(e) => SetPhone(e.target.value)} />
 
-                <button type="button">Next step</button>
+                <button onClick={nextPage} type="button">Next step</button>
             </form>
-            
+
         </div>
     )
     

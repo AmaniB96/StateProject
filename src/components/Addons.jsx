@@ -1,6 +1,6 @@
 import './addons.css'
 
-export default function Addons(enabled) {
+export default function Addons({enabled, prevPage, nextPage}) {
 
     const addonslist = {
         addonsServices: [{
@@ -12,7 +12,7 @@ export default function Addons(enabled) {
             storageYear:20,
         },{
             customMonth: 2,
-            customeYear:20
+            customYear:20
         }
 
         ]
@@ -33,7 +33,7 @@ export default function Addons(enabled) {
                         <span>Access to multiplayer games</span>
                     </div>
                 </div>
-                <div className='servicePrice'>{enabled ? "+$" +addonslist.addonsServices[0].onlineMonth + "/Mo" : "+$"+addonslist.addonsServices[0].onlineYear + "/Mo"}</div>
+                <div className='servicePrice'>{!enabled ? "+$" +addonslist.addonsServices[0].onlineMonth + "/Mo" : "+$"+addonslist.addonsServices[0].onlineYear + "/Yr"}</div>
             </div>
 
             <div className='addChoice'>
@@ -44,7 +44,7 @@ export default function Addons(enabled) {
                         <span>Extra 1tb of cloud save</span>
                     </div>
                 </div>
-                <div className='servicePrice'>{enabled ? "+$" +addonslist.addonsServices[1].storageMonth + "/Mo" : "+$"+addonslist.addonsServices[1].storageYear + "/Mo"}</div>
+                <div className='servicePrice'>{!enabled ? "+$" +addonslist.addonsServices[1].storageMonth + "/Mo" : "+$"+addonslist.addonsServices[1].storageYear + "/Yr"}</div>
             </div>
 
             <div className='addChoice'>
@@ -55,12 +55,12 @@ export default function Addons(enabled) {
                         <span>Custom theme on your profile</span>
                     </div>
                 </div>
-                <div className='servicePrice'>{enabled ? "+$" +addonslist.addonsServices[2].customMonth + "/Mo" : "+$"+addonslist.addonsServices[2].customYear + "/Mo"}</div>
+                <div className='servicePrice'>{!enabled ? "+$" +addonslist.addonsServices[2].customMonth + "/Mo" : "+$"+addonslist.addonsServices[2].customYear + "/Yr"}</div>
             </div>
 
             <div className='navbtnaddons'>
-                <button className='prev'>Go Back</button>
-                <button className='next'> Next Step</button>
+                <button onClick={prevPage} className='prev'>Go Back</button>
+                <button onClick={nextPage} className='next'> Next Step</button>
             </div>
 
         </div>
