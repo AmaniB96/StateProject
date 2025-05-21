@@ -1,0 +1,72 @@
+.summary{
+    height: 100%;
+    width: 65%;
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.infoTitle{
+    height: 25%;
+    width: 100%;
+}
+
+.resume {
+    background-color: hsl(217, 100%, 97%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item p {
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    margin: 0;
+}
+
+.addon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(231, 11%, 63%);
+    margin: 10px 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: hsl(231, 11%, 63%) ;
+}
+
+.total-amount {
+    color: hsl(243, 100%, 62%);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid hsl(229, 24%, 87%);
+    margin: 20px 0;
+}
+
+a {
+    color: hsl(231, 11%, 63%);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 10pt;
+}
+
+a:hover {
+    color: hsl(243, 100%, 62%);
+}

@@ -58,4 +58,17 @@
     font-weight: 700;
 }
 
+.chiffreActif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: hsl(228, 100%, 84%);
+}
+
   

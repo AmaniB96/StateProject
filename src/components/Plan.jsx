@@ -4,37 +4,11 @@ import advanced from '../assets/img/advenced.svg'
 import pro from '../assets/img/pro.svg'
 
 
-export default function Plan({ enabled, setEnabled, selectedPlan, setSelectedPlan, nextPage, prevPage }) {
+export default function Plan({ enabled, setEnabled, selectedPlan, setSelectedPlan, nextPage, prevPage, pricingData }) {
 
-    const pricingData = {
-      plans: [
-        {
-          id: 'arcade',
-          name: 'Arcade',
-          icon: arcade,
-          monthlyPrice: 9,
-          yearlyPrice: 90,
-        },
-        {
-          id: 'advanced',
-          name: 'Advanced',
-          icon: advanced,
-          monthlyPrice: 12,
-          yearlyPrice: 120,
-
-        },
-        {
-          id: 'pro',
-          name: 'Pro',
-          icon: pro,
-          monthlyPrice: 15,
-          yearlyPrice: 150,
-
-        }
-      ]
-    };
 
    const handlePlanSelect = (planId) => {
+        console.log('Selected Plan:', planId)
         setSelectedPlan(planId)
     }
 
