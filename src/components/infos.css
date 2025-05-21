@@ -74,4 +74,8 @@
     margin-top: 20px;
     float: right;
   }
+
+  .infoForm input {
+    width: 90%;
+  }
 }
