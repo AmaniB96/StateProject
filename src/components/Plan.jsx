@@ -2,14 +2,10 @@ import './plan.css'
 import arcade from '../assets/img/arcade.svg'
 import advanced from '../assets/img/advenced.svg'
 import pro from '../assets/img/pro.svg'
-import { useState } from 'react'
 
 
-export default function Plan() {
+export default function Plan({ enabled, setEnabled, selectedPlan, setSelectedPlan }) {
 
-    const [enabled, setEnabled] = useState(false)
-    const [selectedPlan, setSelectedPlan] = useState(null) 
-    
     const pricingData = {
       plans: [
         {
