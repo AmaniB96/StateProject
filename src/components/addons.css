@@ -66,3 +66,27 @@
     box-sizing: border-box;
     margin-top: 80px;
 }
+
+@media (max-width: 768px) {
+  .Addons {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .addChoice {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .addChoice div:first-of-type {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .servicePrice {
+    align-self: flex-end;
+    width: 100%;
+    text-align: right;
+  }
+}

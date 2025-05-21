@@ -147,3 +147,37 @@
     background-color: rgb(214, 217, 230);
     border-color: hsl(243, 100%, 62%) !important;
 }
+
+@media (max-width: 768px) {
+  .plan {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+
+  .arcade, .advanced, .pro {
+    grid-row: auto;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .pricing img {
+    margin-bottom: 0;
+    
+  }
+
+  .navbtn {
+    margin-top: 30px;
+  }
+}

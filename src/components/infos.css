@@ -57,3 +57,21 @@
     bottom: 0;
     right: -30px;
 }
+
+@media (max-width: 768px) {
+  .infos {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .infoTitle h2 {
+    font-size: 20pt;
+  }
+
+  .infoForm button {
+    position: static;
+    margin-top: 20px;
+    float: right;
+  }
+}

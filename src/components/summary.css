@@ -88,3 +88,21 @@ a:hover {
     box-sizing: border-box;
     margin-top: 30px;
 }
+
+
+@media (max-width: 768px) {
+  .summary {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .item, .addon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item p:last-child, .addon p:last-child {
+    margin-top: 5px;
+  }
+}
